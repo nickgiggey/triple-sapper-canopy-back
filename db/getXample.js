@@ -2,7 +2,7 @@
 //---- 2) change filename getXample.js  to get('newName'), then delete this comment-----
 //---- 3) ctrl+H change field xample to newName. then delete this comment --------------------
 
-//------  import axios & fs -----
+// ------  import axios & fs -----
 const axios = require("axios");
 const fs = require("fs");
 
@@ -22,7 +22,7 @@ const getData = async () => {
     `${BaseUrl}${id}`.map((url) => axios.get(url));
   });
 
-  Promise.all(data)
+  Promise.all(await data)
     .then((success) => {
          let dataStorage = await success.map((res) => res.data);
          let dataJSON = JSON.stringify(dataStorage);
