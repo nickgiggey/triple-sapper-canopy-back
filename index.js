@@ -1,43 +1,73 @@
-//=============================================================================
-// Basic Config
-//=============================================================================
-const express = require('express');
-// instantiate express
-const app = express();
-const cors = require('cors');
-app.set('port', process.env.PORT || 4000);
+// --1) ctrl+H REPLACE [example] w/ newName (lowercase) DELETE ME WHEN DONE---------
+// --) IF NEEDED ctrl+H REPLACE [xample] w/ newName (lowercase) DELETE ME WHEN DONE ---------
 
-//=============================================================================
+//= ===============
+// Basic Config
+//= ===============
+
+// ---------  import express --------
+const express = require('express');
+// ---------  instantiate express  ---------
+const app = express();
+// ---------  require cors  ---------
+const mongoose = require('./db/connection');
+
+const cors = require('cors');
+// ---------  app port ----------
+app.set('port', process.env.PORT || 8000);
+
+//= ===============
 // Middleware
-//=============================================================================
-// `express.json` parses application/json request data and
-//  adds it to the request object as request.body
+//= ===============
+// ------  app.use express request json  ------
 app.use(express.json());
-// `express.urlencoded` parses x-ww-form-urlencoded request data and
-//  adds it to the request object as request.body
+// ------  app.use express request urlencoded  ------
 app.use(express.urlencoded({ extended: true }));
+// ------  app.use enable cores  ------
 app.use(cors());
 
-//=============================================================================
+//= ===============
 // ROUTES
-//=============================================================================
-// Redirect
-app.get('/', (req, res) => {
-	res.redirect('/');
+//= ===============
+// ------  app.get redirect -------
+app.get('/examples', (req, res) => {
+	res.redirect('/examples');
 });
-/* START CONTROLLERS HERE */
 
-// const peopleController = require('./controllers/peopleController');
-// app.use('/api/people', peopleController);
+//=======  IF NOT NEEDED DELETE BLOCK  ===========
 
-// const showsController = require('./controllers/showsController');
-// app.use('/api/shows', showsController);
+// app.get("/xamples", (req, res) => {
+//   res.redirect("/xamples");
+// });
 
-/* END CONTROLLERS HERE */
-
-//=============================================================================
+//= ===============
 // START SERVER
-//=============================================================================
+//= ===============
+// ----- start server app.listen --------
 app.listen(app.get('port'), () => {
-	console.log(`✅ PORT: ${app.get('port')} 🌟`);
+	console.log(`Port: ${app.get('port')}`);
+});
+
+/* START CONTROLLERS HERE -- */
+
+// ------ import controller -------
+const exampleController = require('./controllers/exampleController');
+//=======  IF NOT NEEDED DELETE BLOCK  ===========
+// const xampleController = require('./controllers/xampleController');
+
+
+// ------ app.use controller -------
+app.use('/examples', exampleController);
+
+//=======  IF NOT NEEDED DELETE BLOCK  ===========
+// app.use('/xamples', xampleController);
+
+
+
+/* END CONTROLLERS HERE -- */
+// ------  app.use err ------
+app.use((err, req, res, next) => {
+	const statusCode = res.statusCode || 500;
+	const message = err.message || 'Internal Server Error';
+	res.status(statusCode).send(message);
 });
