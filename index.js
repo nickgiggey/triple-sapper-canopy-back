@@ -52,8 +52,12 @@ app.listen(app.get('port'), () => {
 /* START CONTROLLERS HERE -- */
 
 // ------ import & use controller  -------
-const exampleController = require('./controllers/exampleController');
-app.use('/examples', exampleController);
+
+const roomController = require('./controllers/roomController');
+app.use('/rooms', roomController);
+
+// const exampleController = require('./controllers/exampleController');
+// app.use('/examples', exampleController);
 
 /// ----- IF NOT NEEDED DELETE BLOCK  -----//
 // const xampleController = require('./controllers/xampleController');
