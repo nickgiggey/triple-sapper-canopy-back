@@ -1,0 +1,122 @@
+[
+	{
+		"room-number": 101,
+		"availability": true
+	},
+	{
+		"room-number": 102,
+		"availability": true
+	},
+	{
+		"room-number": 103,
+		"availability": true
+	},
+	{
+		"room-number": 104,
+		"availability": true
+	},
+	{
+		"room-number": 105,
+		"availability": true
+	},
+	{
+		"room-number": 106,
+		"availability": true
+	},
+	{
+		"room-number": 107,
+		"availability": true
+	},
+	{
+		"room-number": 108,
+		"availability": true
+	},
+	{
+		"room-number": 109,
+		"availability": true
+	},
+	{
+		"room-number": 110,
+		"availability": true
+	},
+	{
+		"room-number": 201,
+		"availability": true
+	},
+	{
+		"room-number": 202,
+		"availability": true
+	},
+	{
+		"room-number": 203,
+		"availability": true
+	},
+	{
+		"room-number": 204,
+		"availability": true
+	},
+	{
+		"room-number": 205,
+		"availability": true
+	},
+	{
+		"room-number": 206,
+		"availability": true
+	},
+	{
+		"room-number": 207,
+		"availability": true
+	},
+	{
+		"room-number": 208,
+		"availability": true
+	},
+	{
+		"room-number": 209,
+		"availability": true
+	},
+	{
+		"room-number": 210,
+		"availability": true
+	},
+	{
+		"room-number": 301,
+		"availability": true
+	},
+	{
+		"room-number": 302,
+		"availability": true
+	},
+	{
+		"room-number": 303,
+		"availability": true
+	},
+	{
+		"room-number": 304,
+		"availability": true
+	},
+	{
+		"room-number": 305,
+		"availability": true
+	},
+	{
+		"room-number": 306,
+		"availability": true
+	},
+	{
+		"room-number": 307,
+		"availability": true
+	},
+	{
+		"room-number": 308,
+		"availability": true
+	},
+	{
+		"room-number": 309,
+		"availability": true
+	},
+	{
+		"room-number": 310,
+		"availability": true
+	}
+]
