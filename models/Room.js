@@ -4,13 +4,17 @@
 const mongoose = require('../db/connection.js');
 
 //------- create schema function -------
-const ExampleSchema = new mongoose.Schema({
-	title: String,
-	url: String,
+const RoomSChema = new mongoose.Schema({
+	roomnumber: String,
+	availability: Boolean,
+	guestinfo: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'Guest',
+	},
 });
 
 //------- instantiate the model w/ schema -------
-const Example = mongoose.model('Example', ExampleSchema);
+const Room = mongoose.model('Room', RoomSChema);
 
 //------- export model -------
-module.exports = Example;
+module.exports = Room;

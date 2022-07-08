@@ -1,122 +1,122 @@
 [
 	{
-		"room-number": 101,
+		"roomnumber": 101,
 		"availability": true
 	},
 	{
-		"room-number": 102,
+		"roomnumber": 102,
 		"availability": true
 	},
 	{
-		"room-number": 103,
+		"roomnumber": 103,
 		"availability": true
 	},
 	{
-		"room-number": 104,
+		"roomnumber": 104,
 		"availability": true
 	},
 	{
-		"room-number": 105,
+		"roomnumber": 105,
 		"availability": true
 	},
 	{
-		"room-number": 106,
+		"roomnumber": 106,
 		"availability": true
 	},
 	{
-		"room-number": 107,
+		"roomnumber": 107,
 		"availability": true
 	},
 	{
-		"room-number": 108,
+		"roomnumber": 108,
 		"availability": true
 	},
 	{
-		"room-number": 109,
+		"roomnumber": 109,
 		"availability": true
 	},
 	{
-		"room-number": 110,
+		"roomnumber": 110,
 		"availability": true
 	},
 	{
-		"room-number": 201,
+		"roomnumber": 201,
 		"availability": true
 	},
 	{
-		"room-number": 202,
+		"roomnumber": 202,
 		"availability": true
 	},
 	{
-		"room-number": 203,
+		"roomnumber": 203,
 		"availability": true
 	},
 	{
-		"room-number": 204,
+		"roomnumber": 204,
 		"availability": true
 	},
 	{
-		"room-number": 205,
+		"roomnumber": 205,
 		"availability": true
 	},
 	{
-		"room-number": 206,
+		"roomnumber": 206,
 		"availability": true
 	},
 	{
-		"room-number": 207,
+		"roomnumber": 207,
 		"availability": true
 	},
 	{
-		"room-number": 208,
+		"roomnumber": 208,
 		"availability": true
 	},
 	{
-		"room-number": 209,
+		"roomnumber": 209,
 		"availability": true
 	},
 	{
-		"room-number": 210,
+		"roomnumber": 210,
 		"availability": true
 	},
 	{
-		"room-number": 301,
+		"roomnumber": 301,
 		"availability": true
 	},
 	{
-		"room-number": 302,
+		"roomnumber": 302,
 		"availability": true
 	},
 	{
-		"room-number": 303,
+		"roomnumber": 303,
 		"availability": true
 	},
 	{
-		"room-number": 304,
+		"roomnumber": 304,
 		"availability": true
 	},
 	{
-		"room-number": 305,
+		"roomnumber": 305,
 		"availability": true
 	},
 	{
-		"room-number": 306,
+		"roomnumber": 306,
 		"availability": true
 	},
 	{
-		"room-number": 307,
+		"roomnumber": 307,
 		"availability": true
 	},
 	{
-		"room-number": 308,
+		"roomnumber": 308,
 		"availability": true
 	},
 	{
-		"room-number": 309,
+		"roomnumber": 309,
 		"availability": true
 	},
 	{
-		"room-number": 310,
+		"roomnumber": 310,
 		"availability": true
 	}
 ]
