@@ -23,23 +23,12 @@ router.get('/:id', (req, res, next) => {
 		.catch(next);
 });
 
-router.post('/', (req, res, next) => {
-	Room.create(req.body)
-		.then((example) => res.json(example))
-		.catch(next);
-});
-
 router.put('/:id', (req, res, next) => {
 	Room.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
 		.then((example) => res.json(example))
 		.catch(next);
 });
 
-router.delete('/:id', (req, res, next) => {
-	Room.findOneAndDelete({ _id: req.params.id })
-		.then((example) => res.json(example))
-		.catch(next);
-});
 
 //------- export router ------
 
