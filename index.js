@@ -14,7 +14,7 @@ const mongoose = require('./db/connection');
 
 const cors = require('cors');
 // ---------  app port ----------
-app.set('port', process.env.PORT || 8000);
+app.set('port', process.env.PORT || 1337);
 
 //= ===============
 // Middleware
@@ -34,15 +34,16 @@ app.get('/examples', (req, res) => {
 	res.redirect('/examples');
 });
 
-//=======  IF NOT NEEDED DELETE BLOCK  ===========
-
+// ----- IF NOT NEEDED DELETE BLOCK  -----
 // app.get("/xamples", (req, res) => {
 //   res.redirect("/xamples");
 // });
+//----------------------------------------//
 
 //= ===============
 // START SERVER
 //= ===============
+
 // ----- start server app.listen --------
 app.listen(app.get('port'), () => {
 	console.log(`Port: ${app.get('port')}`);
@@ -50,19 +51,14 @@ app.listen(app.get('port'), () => {
 
 /* START CONTROLLERS HERE -- */
 
-// ------ import controller -------
+// ------ import & use controller  -------
 const exampleController = require('./controllers/exampleController');
-//=======  IF NOT NEEDED DELETE BLOCK  ===========
-// const xampleController = require('./controllers/xampleController');
-
-
-// ------ app.use controller -------
 app.use('/examples', exampleController);
 
-//=======  IF NOT NEEDED DELETE BLOCK  ===========
+/// ----- IF NOT NEEDED DELETE BLOCK  -----//
+// const xampleController = require('./controllers/xampleController');
 // app.use('/xamples', xampleController);
-
-
+//----------------------------------------//
 
 /* END CONTROLLERS HERE -- */
 // ------  app.use err ------
