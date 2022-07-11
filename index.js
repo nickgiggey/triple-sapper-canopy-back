@@ -56,6 +56,9 @@ app.listen(app.get('port'), () => {
 const roomController = require('./controllers/roomController');
 app.use('/rooms', roomController);
 
+const guestController = require('./controllers/guestController');
+app.use('/guests', guestController);
+
 // const exampleController = require('./controllers/exampleController');
 // app.use('/examples', exampleController);
 

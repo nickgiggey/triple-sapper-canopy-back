@@ -23,9 +23,21 @@ router.get('/:id', (req, res, next) => {
 		.catch(next);
 });
 
+router.post('/', (req, res, next) => {
+	Guest.create(req.body)
+		.then((guest) => res.json(guest))
+		.catch(next);
+});
+
 router.put('/:id', (req, res, next) => {
 	Guest.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
-		.then((guest) => res.json(exaguestmple))
+		.then((guest) => res.json(guest))
+		.catch(next);
+});
+
+router.delete('/:id', (req, res, next) => {
+	Guest.findOneAndDelete({ _id: req.params.id })
+		.then((guest) => res.json(guest))
 		.catch(next);
 });
 
