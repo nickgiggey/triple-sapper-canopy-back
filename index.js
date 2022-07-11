@@ -54,10 +54,10 @@ app.listen(app.get('port'), () => {
 // ------ import & use controller  -------
 
 const roomController = require('./controllers/roomController');
-app.use('api//rooms', roomController);
+app.use('/api/rooms', roomController);
 
 const guestController = require('./controllers/guestController');
-app.use('api//guests', guestController);
+app.use('/api/guests', guestController);
 
 // const exampleController = require('./controllers/exampleController');
 // app.use('/examples', exampleController);
