@@ -6,7 +6,7 @@ const mongoose = require('../db/connection.js');
 //------- create schema function -------
 const GuestSChema = new mongoose.Schema({
 	name: String,
-	room: number
+	room: Number
 });
 
 //------- instantiate the model w/ schema -------
