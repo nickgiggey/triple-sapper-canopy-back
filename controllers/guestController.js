@@ -6,29 +6,28 @@ const express = require('express');
 const router = express.Router();
 
 //------- import model -------
-const Room = require('../models/Room');
+const Guest = require('../models/Guest');
 
 //------- router functions -------
 
 //(.get , .post , .put , .patch , .delete)
 router.get('/', (req, res, next) => {
-	Room.find({})
-		.then((rooms) => res.json(rooms))
+	Guest.find({})
+		.then((guests) => res.json(guests))
 		.catch(next);
 });
 
 router.get('/:id', (req, res, next) => {
-	Room.findById(req.params.id)
-		.then((room) => res.json(room))
+	Guest.findById(req.params.id)
+		.then((guest) => res.json(guest))
 		.catch(next);
 });
 
 router.put('/:id', (req, res, next) => {
-	Room.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
-		.then((room) => res.json(room))
+	Guest.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
+		.then((guest) => res.json(exaguestmple))
 		.catch(next);
 });
-
 
 //------- export router ------
 
