@@ -8,7 +8,10 @@ const GuestSChema = new mongoose.Schema({
 	name: String,
 	email: String,
 	partySize: Number,
-	room: Number,
+	roominfo: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'Room',
+	},
 });
 
 //------- instantiate the model w/ schema -------
