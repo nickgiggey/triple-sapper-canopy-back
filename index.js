@@ -14,7 +14,7 @@ const mongoose = require('./db/connection');
 
 const cors = require('cors');
 // ---------  app port ----------
-app.set('port', process.env.PORT || 1337);
+
 
 //= ===============
 // Middleware
@@ -44,10 +44,7 @@ app.get('/examples', (req, res) => {
 // START SERVER
 //= ===============
 
-// ----- start server app.listen --------
-app.listen(app.get('port'), () => {
-	console.log(`Port: ${app.get('port')}`);
-});
+
 
 /* START CONTROLLERS HERE -- */
 
@@ -73,4 +70,11 @@ app.use((err, req, res, next) => {
 	const statusCode = res.statusCode || 500;
 	const message = err.message || 'Internal Server Error';
 	res.status(statusCode).send(message);
+});
+
+app.set('port', process.env.PORT || 1337);
+
+// ----- start server app.listen --------
+app.listen(app.get('port'), () => {
+	console.log(`Port: ${app.get('port')}`);
 });
