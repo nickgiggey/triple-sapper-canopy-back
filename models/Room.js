@@ -7,6 +7,7 @@ const mongoose = require('../db/connection.js');
 const RoomSChema = new mongoose.Schema({
 	roomnumber: String,
 	availability: Boolean,
+	roomsize: Number,
 	guestinfo: {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'Guest',
