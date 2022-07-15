@@ -1,122 +1,302 @@
 [
 	{
 		"roomnumber": 101,
-		"availability": true
+		"availability": true,
+		"roomsize": 1
 	},
 	{
 		"roomnumber": 102,
-		"availability": true
+		"availability": true,
+		"roomsize": 1
 	},
 	{
 		"roomnumber": 103,
-		"availability": true
+		"availability": true,
+		"roomsize": 1
 	},
 	{
 		"roomnumber": 104,
-		"availability": true
+		"availability": true,
+		"roomsize": 1
 	},
 	{
 		"roomnumber": 105,
-		"availability": true
+		"availability": true,
+		"roomsize": 1
 	},
 	{
 		"roomnumber": 106,
-		"availability": true
+		"availability": true,
+		"roomsize": 1
 	},
 	{
 		"roomnumber": 107,
-		"availability": true
+		"availability": true,
+		"roomsize": 1
 	},
 	{
 		"roomnumber": 108,
-		"availability": true
+		"availability": true,
+		"roomsize": 1
 	},
 	{
 		"roomnumber": 109,
-		"availability": true
+		"availability": true,
+		"roomsize": 1
 	},
 	{
 		"roomnumber": 110,
-		"availability": true
+		"availability": true,
+		"roomsize": 1
 	},
 	{
 		"roomnumber": 201,
-		"availability": true
+		"availability": true,
+		"roomsize": 2
 	},
 	{
 		"roomnumber": 202,
-		"availability": true
+		"availability": true,
+		"roomsize": 2
 	},
 	{
 		"roomnumber": 203,
-		"availability": true
+		"availability": true,
+		"roomsize": 2
 	},
 	{
 		"roomnumber": 204,
-		"availability": true
+		"availability": true,
+		"roomsize": 2
 	},
 	{
 		"roomnumber": 205,
-		"availability": true
+		"availability": true,
+		"roomsize": 2
 	},
 	{
 		"roomnumber": 206,
-		"availability": true
+		"availability": true,
+		"roomsize": 2
 	},
 	{
 		"roomnumber": 207,
-		"availability": true
+		"availability": true,
+		"roomsize": 2
 	},
 	{
 		"roomnumber": 208,
-		"availability": true
+		"availability": true,
+		"roomsize": 2
 	},
 	{
 		"roomnumber": 209,
-		"availability": true
+		"availability": true,
+		"roomsize": 2
 	},
 	{
 		"roomnumber": 210,
-		"availability": true
+		"availability": true,
+		"roomsize": 2
 	},
 	{
 		"roomnumber": 301,
-		"availability": true
+		"availability": true,
+		"roomsize": 3
 	},
 	{
 		"roomnumber": 302,
-		"availability": true
+		"availability": true,
+		"roomsize": 3
 	},
 	{
 		"roomnumber": 303,
-		"availability": true
+		"availability": true,
+		"roomsize": 3
 	},
 	{
 		"roomnumber": 304,
-		"availability": true
+		"availability": true,
+		"roomsize": 3
 	},
 	{
 		"roomnumber": 305,
-		"availability": true
+		"availability": true,
+		"roomsize": 3
 	},
 	{
 		"roomnumber": 306,
-		"availability": true
+		"availability": true,
+		"roomsize": 3
 	},
 	{
 		"roomnumber": 307,
-		"availability": true
+		"availability": true,
+		"roomsize": 3
 	},
 	{
 		"roomnumber": 308,
-		"availability": true
+		"availability": true,
+		"roomsize": 3
 	},
 	{
 		"roomnumber": 309,
-		"availability": true
+		"availability": true,
+		"roomsize": 3
 	},
 	{
 		"roomnumber": 310,
-		"availability": true
+		"availability": true,
+		"roomsize": 3
+	},
+	{
+		"roomnumber": 401,
+		"availability": true,
+		"roomsize": 4
+	},
+	{
+		"roomnumber": 402,
+		"availability": true,
+		"roomsize": 4
+	},
+	{
+		"roomnumber": 403,
+		"availability": true,
+		"roomsize": 4
+	},
+	{
+		"roomnumber": 404,
+		"availability": true,
+		"roomsize": 4
+	},
+	{
+		"roomnumber": 405,
+		"availability": true,
+		"roomsize": 4
+	},
+	{
+		"roomnumber": 406,
+		"availability": true,
+		"roomsize": 4
+	},
+	{
+		"roomnumber": 407,
+		"availability": true,
+		"roomsize": 4
+	},
+	{
+		"roomnumber": 408,
+		"availability": true,
+		"roomsize": 4
+	},
+	{
+		"roomnumber": 409,
+		"availability": true,
+		"roomsize": 4
+	},
+	{
+		"roomnumber": 410,
+		"availability": true,
+		"roomsize": 4
+	},
+	{
+		"roomnumber": 501,
+		"availability": true,
+		"roomsize": 5
+	},
+	{
+		"roomnumber": 502,
+		"availability": true,
+		"roomsize": 5
+	},
+	{
+		"roomnumber": 503,
+		"availability": true,
+		"roomsize": 5
+	},
+	{
+		"roomnumber": 504,
+		"availability": true,
+		"roomsize": 5
+	},
+	{
+		"roomnumber": 505,
+		"availability": true,
+		"roomsize": 5
+	},
+	{
+		"roomnumber": 506,
+		"availability": true,
+		"roomsize": 5
+	},
+	{
+		"roomnumber": 507,
+		"availability": true,
+		"roomsize": 5
+	},
+	{
+		"roomnumber": 508,
+		"availability": true,
+		"roomsize": 5
+	},
+	{
+		"roomnumber": 509,
+		"availability": true,
+		"roomsize": 5
+	},
+	{
+		"roomnumber": 510,
+		"availability": true,
+		"roomsize": 5
+	},
+	{
+		"roomnumber": 601,
+		"availability": true,
+		"roomsize": 6
+	},
+	{
+		"roomnumber": 602,
+		"availability": true,
+		"roomsize": 6
+	},
+	{
+		"roomnumber": 603,
+		"availability": true,
+		"roomsize": 6
+	},
+	{
+		"roomnumber": 604,
+		"availability": true,
+		"roomsize": 6
+	},
+	{
+		"roomnumber": 605,
+		"availability": true,
+		"roomsize": 6
+	},
+	{
+		"roomnumber": 606,
+		"availability": true,
+		"roomsize": 6
+	},
+	{
+		"roomnumber": 607,
+		"availability": true,
+		"roomsize": 6
+	},
+	{
+		"roomnumber": 608,
+		"availability": true,
+		"roomsize": 6
+	},
+	{
+		"roomnumber": 609,
+		"availability": true,
+		"roomsize": 6
+	},
+	{
+		"roomnumber": 610,
+		"availability": true,
+		"roomsize": 6
 	}
 ]
