@@ -2,7 +2,7 @@
 
 ## Description
 
-This is the backend for [The Gitz Carlton](https://cozy-gnome-816bc0.netlify.app/), a Full Stack (MERN) internal hotel booking app for employees to check in, checkout, and move around guests in a hotel. It provides CRUD functionality to our front end application to allow employees to create/delete/update/and get guests/rooms in the hotel.
+This is the backend for [The Gitz Carlton](https://cozy-gnome-816bc0.netlify.app/), a Full Stack (MERN) internal hotel booking app for employees to check in, checkout, and move around emc2 in a hotel. It provides CRUD functionality to our front end application to allow employees to create/delete/update/and get emc2/rooms in the hotel.
 
 ## Technologies Used
 
@@ -26,13 +26,13 @@ This is the backend for [The Gitz Carlton](https://cozy-gnome-816bc0.netlify.app
 ## API Endpoints
 
 - GET: api/rooms
-- Get: api/guests
+- Get: api/emc2
 - GET: api/rooms/:id
-- Get: api/guests/:id
-- POST: api/guests
-- PATCH: api/guests/:id
+- Get: api/emc2/:id
+- POST: api/emc2
+- PATCH: api/emc2/:id
 - PATCH: api/rooms/:id
-- Delete: api/guests/:id
+- Delete: api/emc2/:id
 
 
-_To see our deployed backend API, click [here](https://secret-waters-54413.herokuapp.com/api/rooms)_
+_To see our deployed backend API, click [here](http://localhost:1337/api/rooms)_
