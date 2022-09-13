@@ -31,5 +31,4 @@ console.log(Initiate.schema.path('salutation.enum'));
 const initiate = new Initiate();
 console.log(initiate.schema.path('salutation.enum'));
 
-//------- export model -------
 module.exports = Initiate;
