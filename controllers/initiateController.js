@@ -21,7 +21,8 @@ router.post('/', async (req, res, next) => {
 	try {
 		const hashedPassword = await bcrypt.hash(JSON.stringify(req.body.code), 10);
 		const newEmc2 = await Emc2.create({
-			code: hashedPassword
+			code: hashedPassword,
+			Authorization: req.body.Authorization,
 		});
 		return res.status(201).json(newEmc2);
 	} catch (error) {
