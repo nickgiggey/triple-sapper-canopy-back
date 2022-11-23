@@ -6,7 +6,6 @@ const express = require('express');
 const router = express.Router();
 const Status = require('../models/Status');
 
-//(.get , .post , .put , .patch , .delete)
 router.get('/', (req, res, next) => {
 	Status.find({})
 		.populate({

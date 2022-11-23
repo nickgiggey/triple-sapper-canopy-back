@@ -34,10 +34,10 @@ router.post('/', async (req, res, next) => {
 		// console.log('typeof stringedNewEmc2', typeof stringedNewEmc2); // string
 
 		const existingUser = await Emc2.findOne({ Authorization });
-		console.log('existingUser', existingUser);
+		console.log('existingUser', existingUser.Authorization);
 		// console.log('typeof existingUser', typeof existingUser); //object
 
-		const stringedExist = JSON.stringify(existingUser)
+		const stringedExist = JSON.stringify(existingUser.Authorization)
 		console.log('stringedExist', stringedExist);
 		// console.log('typeof stringedExist', typeof stringedExist); // string
 		
@@ -48,7 +48,7 @@ router.post('/', async (req, res, next) => {
 		// console.log('typeof req.body.Auth', typeof req.body.Authorization) //string
 		console.log('doesPasswordMatch', doesPasswordMatch);
 		// console.log('typeof doesPasswordMatch', typeof doesPasswordMatch); // boolean
-
+		console.log(`Compare ${Authorization} ----- ${stringedExist}`);
 		if (!doesPasswordMatch)
 			return console.log(`Passwords did not match`); // output
 		return res.status(201).json(stringedNewEmc2);
