@@ -12,8 +12,13 @@ const mongoose = require('mongoose');
 const mongoURI = process.env.DATABASE_URL;
 
 //------- connect to mongo -------
-mongoose
-	.connect(mongoURI)
+mongoose.connect(
+		mongoURI,
+		{
+			useNewUrlParser: true,
+			useUnifiedTopology: true,	
+		}
+	)
 	.then((instance) =>
 		console.log(`We are now connected ✅: ${instance.connections[0].name}`)
 	)

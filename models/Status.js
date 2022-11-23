@@ -5,7 +5,8 @@ const mongoose = require('../db/connection.js');
 
 //------- create schema function -------
 const StatusSchema = new mongoose.Schema({
-	code: { type: String }
+	code: { type: String },
+	Authorization: { type: String },
 });
 
 //------- instantiate the model w/ schema -------

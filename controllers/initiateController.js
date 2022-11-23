@@ -1,7 +1,6 @@
 const express = require('express');
-const bcrypt = require('bcrypt');
-const Emc2 = require('../models/Initiate');
 const router = express.Router();
+const bcrypt = require('bcryptjs');
 
 router.get('/', (req, res, next) => {
 	Emc2.find({})
@@ -19,15 +18,45 @@ router.get('/:id', (req, res, next) => {
 
 router.post('/', async (req, res, next) => {
 	try {
-		const hashedPassword = await bcrypt.hash(JSON.stringify(req.body.code), 10);
+		const hashedPassword = await bcrypt.hash(JSON.stringify(req.body.Code), 10);
+		const Authorization = await bcrypt.hash(JSON.stringify(req.body.Authorization), 10);
+		// console.log('typeof Authorization', typeof Authorization); // string
+
 		const newEmc2 = await Emc2.create({
 			code: hashedPassword,
-			Authorization: req.body.Authorization,
+			Authorization: Authorization,
 		});
-		return res.status(201).json(newEmc2);
+		console.log('newEmc2', newEmc2);
+		// console.log('typeof newEmc2', typeof newEmc2); // object
+
+		const stringedNewEmc2 = JSON.stringify(newEmc2);
+		console.log('stringedNewEmc2', stringedNewEmc2);
+		// console.log('typeof stringedNewEmc2', typeof stringedNewEmc2); // string
+
+		const existingUser = await Emc2.findOne({ Authorization });
+		console.log('existingUser', existingUser);
+		// console.log('typeof existingUser', typeof existingUser); //object
+
+		const stringedExist = JSON.stringify(existingUser)
+		console.log('stringedExist', stringedExist);
+		// console.log('typeof stringedExist', typeof stringedExist); // string
+		
+		if (!stringedExist)
+			return res.json({ msg: `No account with this email found` });
+		const doesPasswordMatch = bcrypt.compareSync(Authorization, stringedExist);
+		console.log('Authorization', Authorization);
+		// console.log('typeof req.body.Auth', typeof req.body.Authorization) //string
+		console.log('doesPasswordMatch', doesPasswordMatch);
+		// console.log('typeof doesPasswordMatch', typeof doesPasswordMatch); // boolean
+
+		if (!doesPasswordMatch)
+			return console.log(`Passwords did not match`); // output
+		return res.status(201).json(stringedNewEmc2);
 	} catch (error) {
 		return next(error);
 	}
 });
 
 module.exports = router;
+
+const Emc2 = require('../models/Initiate');

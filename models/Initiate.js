@@ -1,8 +1,8 @@
 //===== MODEL.JS =========
-
+const enumber = require('../controllers/initiateController')
 //------- create schema function -------
 const mongoose = require('../db/connection.js')
-	, InitiateSchema = new mongoose.Schema(
+	InitiateSchema = new mongoose.Schema(
 		{
 			code: {
 				type: [String],
@@ -10,7 +10,7 @@ const mongoose = require('../db/connection.js')
 			},
 			Authorization: [{
 				type: String,
-				enum: 'Sapper',
+				enum: enumber.Authoriztion,
 			}],
 		},
 		{
@@ -18,7 +18,7 @@ const mongoose = require('../db/connection.js')
 			toJSON: {
 				virtuals: true,
 				transform: (_doc, ret) => {
-					delete ret.code;
+					delete ret.Code;
 					return ret;
 				}
 			},
