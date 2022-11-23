@@ -20,37 +20,25 @@ router.post('/', async (req, res, next) => {
 	try {
 		const hashedPassword = await bcrypt.hash(JSON.stringify(req.body.Code), 10);
 		const Authorization = await bcrypt.hash(JSON.stringify(req.body.Authorization), 10);
-		// console.log('typeof Authorization', typeof Authorization); // string
-
 		const newEmc2 = await Emc2.create({
 			code: hashedPassword,
 			Authorization: Authorization,
 		});
-		console.log('newEmc2', newEmc2);
-		// console.log('typeof newEmc2', typeof newEmc2); // object
-
 		const stringedNewEmc2 = JSON.stringify(newEmc2);
-		console.log('stringedNewEmc2', stringedNewEmc2);
-		// console.log('typeof stringedNewEmc2', typeof stringedNewEmc2); // string
-
 		const existingUser = await Emc2.findOne({ Authorization });
-		console.log('existingUser', existingUser.Authorization);
-		// console.log('typeof existingUser', typeof existingUser); //object
-
-		const stringedExist = JSON.stringify(existingUser.Authorization)
-		console.log('stringedExist', stringedExist);
-		// console.log('typeof stringedExist', typeof stringedExist); // string
-		
+		const stringedExist = JSON.stringify(existingUser.Authorization);
+		const stringedAuth = stringedExist.replace(/\[|\]|"/g, "");
+		console.log('stringedAuthh', stringedAuth);
+		console.log('typeof stringedAuth', typeof stringedAuth);
 		if (!stringedExist)
 			return res.json({ msg: `No account with this email found` });
-		const doesPasswordMatch = bcrypt.compareSync(Authorization, stringedExist);
+		const doesPasswordMatch = bcrypt.compareSync(Authorization, stringedAuth);
 		console.log('Authorization', Authorization);
-		// console.log('typeof req.body.Auth', typeof req.body.Authorization) //string
+		console.log('typeof Authorization', typeof Authorization);
+		console.log(`Compare ${Authorization},${stringedAuth}`);
 		console.log('doesPasswordMatch', doesPasswordMatch);
-		// console.log('typeof doesPasswordMatch', typeof doesPasswordMatch); // boolean
-		console.log(`Compare ${Authorization} ----- ${stringedExist}`);
 		if (!doesPasswordMatch)
-			return console.log(`Passwords did not match`); // output
+			return console.log(`Passwords did not match`);
 		return res.status(201).json(stringedNewEmc2);
 	} catch (error) {
 		return next(error);
